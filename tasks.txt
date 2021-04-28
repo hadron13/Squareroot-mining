@@ -1,0 +1,14 @@
+>tasks
+    >code:
+    stuff                   difficulty      priority    done
+    
+    resizable window        EZ              medium      complete
+    implement map           medium          high        complete
+    implement camera        EZ              high        complete
+    implement rooting       medium          high        complete
+    implement resources     EZ              high        complete
+    implement generation    medium          high        complete
+
+    windows port            unknown         high        complete
+    <
+<
