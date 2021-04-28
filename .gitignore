@@ -54,4 +54,5 @@ dkms.conf
 #stuff
 build-linux/
 build-windows/
+.vscode/
 design.txt
