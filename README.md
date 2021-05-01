@@ -11,6 +11,6 @@
     * ### SDL2_image
     * ### SDL2_mixer
 * ## Windows (Mingw-w64)
-    ` gcc source\\main.c -D WINDOWS_BUILD -o build-windows\\game.exe -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer`
+    ` gcc source\\main.c -D WINDOWS_BUILD -o build-windows\game.exe -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer`
 * ## Linux (gcc)
-    `gcc source/main.c -D LINUX_BUILD -o build-linux\\game.program -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lm`
+    `gcc source/main.c -D LINUX_BUILD -o build-linux/game.program -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lm`
