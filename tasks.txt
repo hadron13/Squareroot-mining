@@ -8,7 +8,13 @@
     implement rooting       medium          high        complete
     implement resources     EZ              high        complete
     implement generation    medium          high        complete
+    windows port            EZ              high        complete
 
-    windows port            unknown         high        complete
+    remove hardcoded stuff  EZ              medium      partial
+    reduce global variables medium          medium      partial
+    remove redundant code   medium          medium      complete
+    rearrange stuff         EZ              low         complete
+    Emscripten web port     unknown         high        no
+
     <
 <
