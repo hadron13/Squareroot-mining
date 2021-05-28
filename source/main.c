@@ -22,6 +22,13 @@
 #include<time.h>
 #include<stdbool.h>
 
+#ifdef EMBED_ASSETS
+#include"tiles.h"
+#include"font.h"
+#include"soundtrack.h"
+#endif
+
+
 #define chance(c)rand()%c==1
 
 #pragma endregion
@@ -95,6 +102,7 @@ SDL_Surface     icon;//unused
 
 Uint8 volume = 64;
 Mix_Music*   soundtrack;
+
 
 #pragma endregion data
 
@@ -364,10 +372,15 @@ int main(int argc,char*argv[]){
     SDL_RenderSetLogicalSize(renderer,1280,720);
     
     //load assets
+    #ifdef EMBED_ASSETS
+    spritesheet         =IMG_LoadTexture_RW(renderer,SDL_RWFromConstMem(tiles_sprites,tiles_size),1);
+    font                =IMG_LoadTexture_RW(renderer,SDL_RWFromConstMem(font_data,font_size),1);
+    soundtrack          =Mix_LoadMUS_RW(SDL_RWFromConstMem(soundtrack_data,soundtrack_size),1);
+    #else
     spritesheet         =IMG_LoadTexture(renderer,asset_path"tiles.png");
     font                =IMG_LoadTexture(renderer,asset_path"font.png");
-    soundtrack          =Mix_LoadMUS(asset_path"soundtrack.mp3");
-
+    soundtrack          =Mix_LoadMUS(assetpath"soundtrack.mp3");
+    #endif
     for (size_t i = 0; i < 11; i++){
         textures[i].h = 16;
         textures[i].w = 16;
